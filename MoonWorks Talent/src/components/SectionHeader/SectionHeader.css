@@ -1,0 +1,23 @@
+.section-header {
+  margin-bottom: var(--space-2xl);
+}
+
+.section-header .eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-md);
+}
+
+.section-header__title {
+  margin-bottom: var(--space-md);
+}
+
+.section-header__title--dark {
+  color: var(--paper-white);
+}
+
+.section-header__subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
