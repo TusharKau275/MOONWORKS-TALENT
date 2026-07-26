@@ -17,23 +17,30 @@
 .footer__logo {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 12px;
   margin-bottom: var(--space-md);
 }
 
-.footer__logo-icon {
-  font-size: 1.5rem;
+.footer__logo-img {
+  height: 44px;
+  width: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  filter: brightness(1.15) saturate(1.1);
 }
 
 .footer__logo-text {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
   color: var(--paper-white);
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .footer__logo-accent {
-  color: var(--amber);
+  color: var(--amber-light);
 }
 
 .footer__tagline {

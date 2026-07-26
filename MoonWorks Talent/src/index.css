@@ -1,7 +1,7 @@
 /* ============================================
    MOONWORKS TALENT — Design System
    Palette: Ink Navy / Paper White / Amber Signal / Deep Teal
-   Type: Fraunces / Work Sans / IBM Plex Mono
+   Type: Plus Jakarta Sans (headings) / Inter (body)
    ============================================ */
 
 /* ---------- Design Tokens ---------- */
@@ -45,9 +45,9 @@
   --shadow-teal: 0 4px 20px rgba(44, 95, 90, 0.2);
 
   /* Typography */
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Work Sans', system-ui, -apple-system, sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Inter', ui-monospace, Consolas, monospace;
 
   /* Spacing */
   --space-xs: 4px;
@@ -138,9 +138,10 @@ select {
 /* ---------- Typography ---------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
   color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
 h1 {
@@ -172,10 +173,10 @@ p {
 }
 
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--amber);
 }

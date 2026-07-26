@@ -4,7 +4,8 @@
 
 /* Hero */
 .about-hero {
-  padding-top: var(--space-4xl);
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
 }
 
 .about-hero__title {
@@ -14,8 +15,8 @@
 .about-hero__subtitle {
   max-width: 700px;
   margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.65;
 }
 
 /* Vision & Mission */
@@ -100,9 +101,12 @@
 }
 
 .founder__role {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.88rem;
+  font-weight: 600;
   color: var(--amber-light);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   margin-bottom: var(--space-lg);
 }
 

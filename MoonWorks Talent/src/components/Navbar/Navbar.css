@@ -28,11 +28,8 @@
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--ink-navy);
+  gap: 10px;
+  text-decoration: none;
   z-index: 1001;
   transition: transform var(--transition-fast);
 }
@@ -41,12 +38,25 @@
   transform: scale(1.02);
 }
 
-.navbar__logo-icon {
-  font-size: 1.6rem;
+.navbar__logo-img {
+  height: 44px;
+  width: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.navbar__logo-text {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink-navy);
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .navbar__logo-accent {
-  color: var(--amber);
+  color: var(--amber-dark);
 }
 
 /* Nav links */

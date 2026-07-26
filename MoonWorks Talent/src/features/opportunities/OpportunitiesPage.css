@@ -3,7 +3,8 @@
 }
 
 .opp-hero {
-  padding-top: var(--space-4xl);
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
 }
 
 .opp-hero__title {
@@ -13,8 +14,8 @@
 .opp-hero__subtitle {
   max-width: 600px;
   margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.65;
 }
 
 /* Facts banner */

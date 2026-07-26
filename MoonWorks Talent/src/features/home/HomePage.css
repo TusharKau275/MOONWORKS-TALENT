@@ -1,10 +1,11 @@
 /* ========== HERO ========== */
 .hero {
   position: relative;
-  min-height: calc(100vh - var(--nav-height));
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: calc(var(--nav-height) + var(--space-3xl));
+  padding-top: var(--nav-height);
+  padding-bottom: var(--space-2xl);
   overflow: hidden;
 }
 
@@ -41,9 +42,9 @@
 }
 
 .hero__title {
-  font-size: clamp(2.5rem, 5.5vw, 4rem);
-  line-height: 1.1;
-  margin-bottom: var(--space-lg);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  line-height: 1.12;
+  margin-bottom: var(--space-md);
 }
 
 .hero__highlight {
@@ -56,17 +57,17 @@
 }
 
 .hero__subtitle {
-  font-size: 1.15rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.65;
   color: var(--text-secondary);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
   max-width: 520px;
 }
 
 .hero__actions {
   display: flex;
   gap: var(--space-md);
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
   flex-wrap: wrap;
 }
 
@@ -139,9 +140,10 @@
 
 .hero__stat-number {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.35rem;
+  font-weight: 800;
   color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .hero__stat-label {
