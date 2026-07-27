@@ -1,10 +1,10 @@
 import './SectionHeader.css';
 
-const SectionHeader = ({ eyebrow, title, subtitle, dark = false, tealEyebrow = false }) => {
+const SectionHeader = ({ eyebrow, title, subtitle, dark = false, tealEyebrow = false, left = false }) => {
   return (
-    <div className="section-header text-center">
+    <div className={`section-header ${left ? '' : 'text-center'}`}>
       {eyebrow && (
-        <span className={`eyebrow ${tealEyebrow ? 'eyebrow--teal' : ''}`}>
+        <span className={`eyebrow ${tealEyebrow ? 'eyebrow--teal' : ''} section-header__eyebrow`}>
           {eyebrow}
         </span>
       )}

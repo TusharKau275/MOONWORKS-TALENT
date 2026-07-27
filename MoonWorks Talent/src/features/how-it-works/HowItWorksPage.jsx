@@ -41,7 +41,7 @@ const faqs = [
 
 const HowItWorksPage = () => {
   return (
-    <main className="hiw-page">
+    <main className="hiw-page animate-fade-in-up delay-1">
       {/* Hero */}
       <section className="hiw-hero section" id="hiw-hero">
         <div className="container text-center">

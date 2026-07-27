@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useLenis } from './hooks/useLenis';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import HomePage from './features/home/HomePage';
@@ -18,6 +19,8 @@ function ScrollToTop() {
 }
 
 function App() {
+  useLenis();
+
   return (
     <>
       <ScrollToTop />

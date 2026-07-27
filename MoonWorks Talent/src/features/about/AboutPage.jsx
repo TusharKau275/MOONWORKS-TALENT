@@ -4,7 +4,7 @@ import './AboutPage.css';
 
 const AboutPage = () => {
   return (
-    <main className="about-page">
+    <main className="about-page animate-fade-in-up delay-1">
       {/* Hero */}
       <section className="about-hero section" id="about-hero">
         <div className="container text-center">

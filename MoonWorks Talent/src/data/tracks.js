@@ -1,11 +1,10 @@
 // Static data for the 7 confirmed internship tracks
-// Grouped into 5 sectors as proposed in myplan.md Section 7.2
+// Grouped into 5 sectors
 
 export const sectors = [
   {
     id: 'tech',
     name: 'Technology & Development',
-    icon: '💻',
     color: 'var(--teal)',
     description: 'Build real-world web applications and gain hands-on coding experience.',
     tracks: [
@@ -22,9 +21,8 @@ export const sectors = [
   {
     id: 'design',
     name: 'Design & Creative',
-    icon: '🎨',
-    color: 'var(--amber)',
-    description: 'Create stunning visual assets and build a professional design portfolio.',
+    color: 'var(--blue)',
+    description: 'Create professional visual assets and build a strong design portfolio.',
     tracks: [
       {
         id: 'graphic-design',
@@ -39,9 +37,8 @@ export const sectors = [
   {
     id: 'marketing',
     name: 'Marketing & Growth',
-    icon: '📈',
     color: '#7C3AED',
-    description: 'Learn digital marketing strategies that drive real engagement and growth.',
+    description: 'Learn digital marketing strategies that drive measurable engagement and growth.',
     tracks: [
       {
         id: 'social-media',
@@ -64,7 +61,6 @@ export const sectors = [
   {
     id: 'hr',
     name: 'People & HR',
-    icon: '🤝',
     color: '#EC4899',
     description: 'Develop people management and talent acquisition skills.',
     tracks: [
@@ -81,9 +77,8 @@ export const sectors = [
   {
     id: 'operations',
     name: 'Business Operations',
-    icon: '⚙️',
     color: '#0EA5E9',
-    description: 'Learn how businesses run behind the scenes — coordination, planning, and execution.',
+    description: 'Learn how businesses operate — coordination, planning, and execution.',
     tracks: [
       {
         id: 'admin',
@@ -110,6 +105,5 @@ export const allTracks = sectors.flatMap((sector) =>
   sector.tracks.map((track) => ({
     ...track,
     sectorName: sector.name,
-    sectorIcon: sector.icon,
   }))
 );

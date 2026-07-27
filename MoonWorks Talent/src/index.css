@@ -1,51 +1,59 @@
 /* ============================================
    MOONWORKS TALENT — Design System
-   Palette: Ink Navy / Paper White / Amber Signal / Deep Teal
-   Type: Plus Jakarta Sans (headings) / Inter (body)
+   Palette: Ink Navy / Clean White / Corporate Blue / Slate
+   Type: Sora (headings) / Inter (body)
    ============================================ */
 
 /* ---------- Design Tokens ---------- */
 :root {
-  /* Colors */
-  --ink-navy: #14213D;
-  --ink-navy-light: #1b2d52;
-  --ink-navy-dark: #0d1629;
-  --paper-white: #FAF9F6;
-  --paper-warm: #F5F3EE;
-  --amber: #E8A33D;
-  --amber-light: #F0BD6B;
-  --amber-dark: #C8872A;
-  --amber-glow: rgba(232, 163, 61, 0.15);
-  --slate: #6B7280;
-  --slate-light: #9CA3AF;
-  --teal: #2C5F5A;
-  --teal-light: #3A7D76;
-  --teal-dark: #1E4340;
-  --teal-glow: rgba(44, 95, 90, 0.12);
+  /* Colors — Corporate Blue palette */
+  --ink-navy: #0F172A;
+  --ink-navy-light: #1E293B;
+  --ink-navy-dark: #020617;
+  --paper-white: #FFFFFF;
+  --paper-warm: #F8FAFC;
+  --blue: #2563EB;
+  --blue-light: #3B82F6;
+  --blue-dark: #1D4ED8;
+  --blue-glow: rgba(37, 99, 235, 0.12);
+  --slate: #64748B;
+  --slate-light: #94A3B8;
+  --slate-lighter: #CBD5E1;
+  --teal: #0891B2;
+  --teal-light: #06B6D4;
+  --teal-dark: #0E7490;
+  --teal-glow: rgba(8, 145, 178, 0.12);
+
+  /* Legacy amber aliases — kept so components referencing them don't break */
+  --amber: var(--blue);
+  --amber-light: var(--blue-light);
+  --amber-dark: var(--blue-dark);
+  --amber-glow: var(--blue-glow);
+  --shadow-amber: 0 4px 20px rgba(37, 99, 235, 0.28);
 
   /* Semantic */
   --text-primary: var(--ink-navy);
   --text-secondary: var(--slate);
   --text-muted: var(--slate-light);
-  --text-on-dark: var(--paper-white);
+  --text-on-dark: #F1F5F9;
   --bg-primary: var(--paper-white);
   --bg-secondary: var(--paper-warm);
   --bg-dark: var(--ink-navy);
-  --accent-primary: var(--amber);
+  --accent-primary: var(--blue);
   --accent-secondary: var(--teal);
-  --border-color: #E5E7EB;
-  --border-dark: rgba(255, 255, 255, 0.1);
+  --border-color: #E2E8F0;
+  --border-dark: rgba(255, 255, 255, 0.08);
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(20, 33, 61, 0.05);
-  --shadow-md: 0 4px 12px rgba(20, 33, 61, 0.08);
-  --shadow-lg: 0 12px 32px rgba(20, 33, 61, 0.12);
-  --shadow-xl: 0 20px 48px rgba(20, 33, 61, 0.16);
-  --shadow-amber: 0 4px 20px rgba(232, 163, 61, 0.3);
-  --shadow-teal: 0 4px 20px rgba(44, 95, 90, 0.2);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.1);
+  --shadow-xl: 0 20px 48px rgba(15, 23, 42, 0.14);
+  --shadow-teal: 0 4px 20px rgba(8, 145, 178, 0.2);
+  --shadow-blue: 0 4px 20px rgba(37, 99, 235, 0.28);
 
   /* Typography */
-  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Sora', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'Inter', ui-monospace, Consolas, monospace;
 
@@ -60,10 +68,10 @@
   --space-4xl: 96px;
 
   /* Radii */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
   --radius-full: 9999px;
 
   /* Transitions */
@@ -75,7 +83,7 @@
 
   /* Layout */
   --max-width: 1200px;
-  --nav-height: 72px;
+  --nav-height: 68px;
 }
 
 /* ---------- Reset ---------- */
@@ -136,53 +144,78 @@ select {
 }
 
 /* ---------- Typography ---------- */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.15;
   color: var(--text-primary);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 h1 {
   font-size: clamp(2.25rem, 5vw, 3.75rem);
-  letter-spacing: -0.02em;
-  font-optical-sizing: auto;
+  font-weight: 800;
+  letter-spacing: -0.03em;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
-  letter-spacing: -0.015em;
+  font-size: clamp(1.65rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  letter-spacing: -0.01em;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 h4 {
-  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-family: var(--font-body);
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 p {
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.75;
   color: var(--text-secondary);
 }
 
+/* Eyebrow — professional bar-accent style */
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--amber);
+  color: var(--blue);
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: var(--blue);
+  flex-shrink: 0;
 }
 
 .eyebrow--teal {
   color: var(--teal);
+}
+
+.eyebrow--teal::before {
+  background: var(--teal);
 }
 
 /* ---------- Layout Utilities ---------- */
@@ -232,6 +265,11 @@ p {
   text-align: center;
 }
 
+/* Center eyebrow bar */
+.text-center .eyebrow {
+  justify-content: center;
+}
+
 .grid {
   display: grid;
   gap: var(--space-lg);
@@ -241,8 +279,9 @@ p {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -250,8 +289,13 @@ p {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideInLeft {
@@ -259,6 +303,7 @@ p {
     opacity: 0;
     transform: translateX(-24px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -266,23 +311,47 @@ p {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes orbitSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .animate-fade-in-up {
@@ -294,15 +363,33 @@ p {
 }
 
 /* Staggered animation delays */
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
-.delay-4 { animation-delay: 0.4s; }
-.delay-5 { animation-delay: 0.5s; }
-.delay-6 { animation-delay: 0.6s; }
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -310,6 +397,7 @@ p {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
   html {
     scroll-behavior: auto;
   }
@@ -317,31 +405,25 @@ p {
 
 /* ---------- Focus Styles ---------- */
 :focus-visible {
-  outline: 2px solid var(--amber);
+  outline: 2px solid var(--blue);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
 
 /* ---------- Selection ---------- */
 ::selection {
-  background-color: var(--amber);
-  color: var(--ink-navy);
+  background-color: var(--blue-glow);
+  color: var(--blue-dark);
 }
 
-/* ---------- Scrollbar ---------- */
+/* ---------- Scrollbar (hidden — smooth scroll via Lenis) ---------- */
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Chrome, Safari, Edge */
 ::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--paper-warm);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--slate-light);
-  border-radius: var(--radius-full);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--slate);
+  width: 0;
+  display: none;
 }

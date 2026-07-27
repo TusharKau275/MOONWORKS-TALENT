@@ -1,23 +1,30 @@
 .section-header {
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
 }
 
-.section-header .eyebrow {
-  display: inline-block;
+.section-header__eyebrow {
+  display: inline-flex;
   margin-bottom: var(--space-md);
 }
 
 .section-header__title {
   margin-bottom: var(--space-md);
+  line-height: 1.12;
 }
 
 .section-header__title--dark {
-  color: var(--paper-white);
+  color: var(--text-on-dark);
 }
 
 .section-header__subtitle {
-  max-width: 600px;
+  max-width: 580px;
   margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* When dark section, subtitle is lighter */
+.section--dark .section-header__subtitle {
+  color: var(--slate-light);
 }

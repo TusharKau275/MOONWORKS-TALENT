@@ -59,27 +59,27 @@ const ContactPage = () => {
   };
 
   return (
-    <main className="contact-page">
+    <main className="contact-page animate-fade-in-up delay-1">
       {/* Hero */}
       <section className="contact-hero section" id="contact-hero">
-        <div className="container text-center">
+        <div className="container text-center ">
           <span className="eyebrow">Get In Touch</span>
-          <h1 className="contact-hero__title">
+          <h1 className="contact-hero__title animate-fade-in-up delay-1">
             Let's <span className="hero__highlight">Start</span> Your Journey
           </h1>
-          <p className="contact-hero__subtitle">
+          <p className="contact-hero__subtitle animate-fade-in-up delay-2">
             Ready to apply? Have a question? Fill out the form below and we'll get back to you quickly.
           </p>
         </div>
       </section>
 
       {/* Form + Info */}
-      <section className="contact-main section section--alt" id="contact-form-section">
+      <section className="contact-main section section--alt animate-fade-in-up delay-2" id="contact-form-section">
         <div className="container">
           <div className="contact-grid">
             {/* Form */}
             <div className="contact-form-wrapper">
-              <h3 className="contact-form__title">Apply / Contact Us</h3>
+              <h3 className="contact-form__title">Apply For Internship & Join Us</h3>
               <p className="contact-form__subtitle">
                 Fill in your details and select the track you're interested in. We'll reach out with next steps.
               </p>
@@ -163,7 +163,7 @@ const ContactPage = () => {
 
                   {status === 'error' && (
                     <div className="form-error" id="form-error" role="alert">
-                      ⚠️ {errorMsg}
+                      {errorMsg}
                     </div>
                   )}
 
@@ -183,36 +183,36 @@ const ContactPage = () => {
             {/* Info sidebar */}
             <div className="contact-info">
               <div className="contact-info-card">
-                <h4 className="contact-info-card__title">📧 Email Us</h4>
+                <h4 className="contact-info-card__title"> Email Us</h4>
                 <a href="mailto:moonworks.talent@gmail.com" className="contact-info-card__link">
                   moonworks.talent@gmail.com
                 </a>
               </div>
 
               <div className="contact-info-card">
-                <h4 className="contact-info-card__title">📍 Location</h4>
+                <h4 className="contact-info-card__title"> Location</h4>
                 <p className="contact-info-card__text">Haryana, India</p>
               </div>
 
               <div className="contact-info-card">
-                <h4 className="contact-info-card__title">⏰ Response Time</h4>
-                <p className="contact-info-card__text">We typically respond within 2-3 working days.</p>
+                <h4 className="contact-info-card__title"> Response Time</h4>
+                <p className="contact-info-card__text">We typically respond within 1-2 working days.</p>
               </div>
 
               {/* Trust badge */}
               <div className="contact-trust">
                 <div className="contact-trust__badge">
-                  <span className="contact-trust__icon">🏛️</span>
+                  <span className="contact-trust__icon"></span>
                   <div>
                     <span className="contact-trust__label">MSME Registered</span>
                     <span className="contact-trust__sub">Udyam Certified Micro Enterprise</span>
                   </div>
                 </div>
                 <ul className="contact-trust__list">
-                  <li>✅ 100% Free — No hidden charges</li>
-                  <li>✅ 100% Remote — Work from home</li>
-                  <li>✅ Verified Certificates</li>
-                  <li>✅ Real mentored projects</li>
+                  <li>100% Free — No hidden charges</li>
+                  <li>100% Remote — Work from home</li>
+                  <li>Verified Certificates issued</li>
+                  <li>Real mentored projects</li>
                 </ul>
               </div>
             </div>
