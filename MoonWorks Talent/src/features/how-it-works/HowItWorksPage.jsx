@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-import SectionHeader from '../../components/SectionHeader/SectionHeader';
-import { steps } from '../../data/steps';
+import SEO from '../../components/SEO/SEO.jsx';
+import { getFAQSchema, getBreadcrumbSchema } from '../../components/SEO/schemas.js';
+import SectionHeader from '../../components/SectionHeader/SectionHeader.jsx';
+import { steps } from '../../data/steps.js';
 import './HowItWorksPage.css';
 
 const faqs = [
@@ -40,17 +42,33 @@ const faqs = [
 ];
 
 const HowItWorksPage = () => {
+  // Combine FAQ + Breadcrumb schemas
+  const structuredData = [
+    getFAQSchema(faqs),
+    getBreadcrumbSchema([
+      { name: 'Home', path: '/' },
+      { name: 'How It Works', path: '/how-it-works' },
+    ]),
+  ];
+
   return (
     <main className="hiw-page animate-fade-in-up delay-1">
+      <SEO
+        title="How It Works — 4 Steps to Your Free Remote Internship"
+        description="Apply in 2 minutes, get your offer letter, complete weekly mentor-guided tasks, and earn verified certificates. Learn the complete process of interning with Moonworks Talent."
+        path="/how-it-works"
+        structuredData={structuredData}
+      />
+
       {/* Hero */}
       <section className="hiw-hero section" id="hiw-hero">
         <div className="container text-center">
           <span className="eyebrow">How It Works</span>
           <h1 className="hiw-hero__title">
-            From Application to <span className="hero__highlight">Certification</span>
+            4 Steps to Your Free Remote <span className="hero__highlight">Internship</span>
           </h1>
           <p className="hiw-hero__subtitle">
-            Your journey with Moonworks Talent is simple, structured, and designed to build real skills. Here's how it works.
+            Your journey with Moonworks Talent is simple, structured, and designed to build real skills. Here's how it works — from application to certification.
           </p>
         </div>
       </section>
@@ -74,6 +92,11 @@ const HowItWorksPage = () => {
               </div>
             ))}
           </div>
+
+          <p style={{ textAlign: 'center', marginTop: 'var(--space-xl)', color: 'var(--text-secondary)' }}>
+            Ready to begin? <Link to="/contact" style={{ color: 'var(--blue)', fontWeight: 600, textDecoration: 'underline' }}>Apply now</Link> or{' '}
+            <Link to="/opportunities" style={{ color: 'var(--blue)', fontWeight: 600, textDecoration: 'underline' }}>explore all 7 tracks</Link>.
+          </p>
         </div>
       </section>
 
@@ -180,6 +203,7 @@ const HowItWorksPage = () => {
           <h2>Ready to Take the First Step?</h2>
           <p style={{ color: 'var(--text-secondary)', maxWidth: '480px', margin: '16px auto 32px' }}>
             Apply now and start your internship journey with Moonworks Talent. It takes less than 2 minutes.
+            Learn more <Link to="/about" style={{ color: 'var(--blue)', fontWeight: 600, textDecoration: 'underline' }}>about our company</Link>.
           </p>
           <Link to="/contact" className="hero__btn hero__btn--primary">
             Apply Now — It's Free <span className="hero__btn-arrow">→</span>

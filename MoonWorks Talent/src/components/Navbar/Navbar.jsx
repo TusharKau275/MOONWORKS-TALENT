@@ -39,7 +39,7 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <nav className={`navbar__nav ${mobileOpen ? 'navbar__nav--open' : ''}`} id="nav-menu">
+        <nav className={`navbar__nav ${mobileOpen ? 'navbar__nav--open' : ''}`} id="nav-menu" aria-label="Main navigation">
           <ul className="navbar__links">
             {navLinks.map((link) => (
               <li key={link.to}>

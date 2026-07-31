@@ -1,16 +1,30 @@
 import { Link } from 'react-router-dom';
-import SectionHeader from '../../components/SectionHeader/SectionHeader';
+import SEO from '../../components/SEO/SEO.jsx';
+import { getBreadcrumbSchema } from '../../components/SEO/schemas.js';
+import SectionHeader from '../../components/SectionHeader/SectionHeader.jsx';
 import './AboutPage.css';
 
 const AboutPage = () => {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+  ]);
+
   return (
     <main className="about-page animate-fade-in-up delay-1">
+      <SEO
+        title="About Us — MSME Registered Free Internship Company"
+        description="Moonworks Talent is a government-registered MSME (Udyam certified) company offering 100% free, remote internships for students and freshers across India. Learn about our vision, mission, and founder."
+        path="/about"
+        structuredData={breadcrumbSchema}
+      />
+
       {/* Hero */}
       <section className="about-hero section" id="about-hero">
         <div className="container text-center">
           <span className="eyebrow">About Us</span>
           <h1 className="about-hero__title">
-            Making Careers <span className="hero__highlight">Accessible</span> for Everyone
+            Free Internships Made <span className="hero__highlight">Accessible</span> for Every Student in India
           </h1>
           <p className="about-hero__subtitle">
             Moonworks Talent is a government-registered MSME (Udyam certified) micro enterprise based in Haryana, India —
@@ -68,6 +82,10 @@ const AboutPage = () => {
               </div>
             ))}
           </div>
+
+          <p className="values__link-text" style={{ textAlign: 'center', marginTop: 'var(--space-xl)', color: 'var(--text-secondary)' }}>
+            Explore all <Link to="/opportunities" style={{ color: 'var(--blue)', fontWeight: 600, textDecoration: 'underline' }}>7 internship tracks →</Link> and find the one that matches your goals.
+          </p>
         </div>
       </section>
 
@@ -123,6 +141,7 @@ const AboutPage = () => {
           <h2>Ready to Start Your Journey?</h2>
           <p style={{ color: 'var(--text-secondary)', maxWidth: '480px', margin: '16px auto 32px' }}>
             Join Moonworks Talent and get access to free, mentored internships with verified certificates.
+            See <Link to="/how-it-works" style={{ color: 'var(--blue)', fontWeight: 600, textDecoration: 'underline' }}>how it works</Link> or apply directly.
           </p>
           <Link to="/contact" className="hero__btn hero__btn--primary">
             Get Started — It's Free <span className="hero__btn-arrow">→</span>

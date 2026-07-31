@@ -1,0 +1,6 @@
+# Moonworks Talent — robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://moonworks-talent-rho.vercel.app/sitemap.xml

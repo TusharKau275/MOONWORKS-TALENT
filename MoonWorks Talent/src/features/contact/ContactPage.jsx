@@ -1,5 +1,8 @@
 import { useState } from 'react';
-import { allTracks } from '../../data/tracks';
+import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO/SEO.jsx';
+import { getBreadcrumbSchema } from '../../components/SEO/schemas.js';
+import { allTracks } from '../../data/tracks.js';
 import './ContactPage.css';
 
 const API_URL = import.meta.env.VITE_API_URL || '';
@@ -58,17 +61,30 @@ const ContactPage = () => {
     }
   };
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Contact & Apply', path: '/contact' },
+  ]);
+
   return (
     <main className="contact-page animate-fade-in-up delay-1">
+      <SEO
+        title="Apply for Free Internship — Contact Moonworks Talent"
+        description="Apply for a 100% free, remote internship at Moonworks Talent. Choose from 7 tracks including Web Dev, HR, Marketing, Design & more. Get certificates & experience letters. Apply in 2 minutes!"
+        path="/contact"
+        structuredData={breadcrumbSchema}
+      />
+
       {/* Hero */}
       <section className="contact-hero section" id="contact-hero">
         <div className="container text-center ">
           <span className="eyebrow">Get In Touch</span>
           <h1 className="contact-hero__title animate-fade-in-up delay-1">
-            Let's <span className="hero__highlight">Start</span> Your Journey
+            Apply for a Free <span className="hero__highlight">Remote Internship</span>
           </h1>
           <p className="contact-hero__subtitle animate-fade-in-up delay-2">
             Ready to apply? Have a question? Fill out the form below and we'll get back to you quickly.
+            Not sure which track to choose? <Link to="/opportunities" style={{ color: 'var(--blue)', fontWeight: 600, textDecoration: 'underline' }}>Explore all 7 internship tracks</Link>.
           </p>
         </div>
       </section>
@@ -79,9 +95,10 @@ const ContactPage = () => {
           <div className="contact-grid">
             {/* Form */}
             <div className="contact-form-wrapper">
-              <h3 className="contact-form__title">Apply For Internship & Join Us</h3>
+              <h2 className="contact-form__title">Apply For Internship & Join Us</h2>
               <p className="contact-form__subtitle">
                 Fill in your details and select the track you're interested in. We'll reach out with next steps.
+                Learn <Link to="/how-it-works" style={{ color: 'var(--blue)', textDecoration: 'underline' }}>how the process works</Link>.
               </p>
 
               {status === 'success' ? (
@@ -91,7 +108,8 @@ const ContactPage = () => {
                   <p>
                     Thanks for reaching out! We've received your application and will get back to you within 2-3 working days.
                   </p>
-                  <button
+                  <button 
+                    type="button"
                     className="hero__btn hero__btn--secondary"
                     onClick={() => setStatus('idle')}
                     style={{ marginTop: '24px' }}
@@ -184,14 +202,18 @@ const ContactPage = () => {
             <div className="contact-info">
               <div className="contact-info-card">
                 <h4 className="contact-info-card__title"> Email Us</h4>
-                <a href="mailto:moonworks.talent@gmail.com" className="contact-info-card__link">
-                  moonworks.talent@gmail.com
-                </a>
+                <address style={{ fontStyle: 'normal' }}>
+                  <a href="mailto:moonworks.talent@gmail.com" className="contact-info-card__link">
+                    moonworks.talent@gmail.com
+                  </a>
+                </address>
               </div>
 
               <div className="contact-info-card">
                 <h4 className="contact-info-card__title"> Location</h4>
-                <p className="contact-info-card__text">Haryana, India</p>
+                <address style={{ fontStyle: 'normal' }}>
+                  <p className="contact-info-card__text">Haryana, India</p>
+                </address>
               </div>
 
               <div className="contact-info-card">

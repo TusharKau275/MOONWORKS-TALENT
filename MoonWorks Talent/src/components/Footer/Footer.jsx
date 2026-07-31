@@ -15,11 +15,11 @@ const footerLinks = [
   {
     title: 'Internship Tracks',
     links: [
-      { to: '/opportunities', label: 'Website Development' },
-      { to: '/opportunities', label: 'Graphic Design' },
-      { to: '/opportunities', label: 'Social Media Marketing' },
-      { to: '/opportunities', label: 'HR' },
-      { to: '/opportunities', label: 'Operations' },
+      { to: '/opportunities#track-web-dev', label: 'Website Development' },
+      { to: '/opportunities#track-graphic-design', label: 'Graphic Design' },
+      { to: '/opportunities#track-social-media', label: 'Social Media Marketing' },
+      { to: '/opportunities#track-hr', label: 'HR' },
+      { to: '/opportunities#track-operations', label: 'Operations' },
     ],
   },
 ];
@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Brand column */}
           <div className="footer__brand">
             <div className="footer__logo">
-              <img src="/moon-logo-transparent.png" alt="Moonworks icon" className="footer__logo-img" />
+              <img src="/moon-logo-transparent.png" alt="Moonworks Talent logo" className="footer__logo-img" loading="lazy" width="40" height="40" />
               <span className="footer__logo-text">
                 Moon<span className="footer__logo-accent">works</span> Talent
               </span>

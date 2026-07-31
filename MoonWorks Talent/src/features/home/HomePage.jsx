@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
-import SectionHeader from '../../components/SectionHeader/SectionHeader';
-import { sectors } from '../../data/tracks';
-import { technologies, categories } from '../../data/technologies';
-import { steps } from '../../data/steps';
+import SEO from '../../components/SEO/SEO.jsx';
+import { getOrganizationSchema, getWebSiteSchema } from '../../components/SEO/schemas.js';
+import SectionHeader from '../../components/SectionHeader/SectionHeader.jsx';
+import { sectors } from '../../data/tracks.js';
+import { technologies, categories } from '../../data/technologies.js';
+import { steps } from '../../data/steps.js';
 import './HomePage.css';
 
 /* Inline SVG icons for deliverables — no emojis */
@@ -32,16 +34,26 @@ const IconAward = () => (
 );
 
 const HomePage = () => {
+  // Combine Organization + WebSite schemas
+  const structuredData = [getOrganizationSchema(), getWebSiteSchema()];
+
   return (
     <main>
+      <SEO
+        title="Moonworks Talent — Free Remote Internships for Students & Freshers in India"
+        description="100% free, remote internships for students and freshers across India. 7+ tracks including Web Dev, HR, Marketing, Design & more. MSME registered. Certificates & experience letters. Apply now!"
+        path="/"
+        structuredData={structuredData}
+      />
+
       {/* ========== HERO ========== */}
       <section className="hero section" id="hero">
         <div className="container">
           <div className="hero__content">
 
             <h1 className="hero__title animate-fade-in-up delay-1">
-              Launch Your Career<br />
-              with <span className="hero__highlight">Real Experience</span>.
+              Free Remote Internships<br />
+              for <span className="hero__highlight">Students & Freshers</span>.
             </h1>
 
             <p className="hero__subtitle animate-fade-in-up delay-2">
@@ -61,7 +73,7 @@ const HomePage = () => {
 
             <div className="hero__stats animate-fade-in-up delay-4">
               <div className="hero__stat">
-                <span className="hero__stat-number">7</span>
+                <span className="hero__stat-number">7+</span>
                 <span className="hero__stat-label">Internship Tracks</span>
               </div>
               <div className="hero__stat-divider"></div>
@@ -79,7 +91,13 @@ const HomePage = () => {
 
           {/* Hero logo — clean, no orbit decoration */}
           <div className="hero__logo-block animate-fade-in delay-2" aria-hidden="true">
-            <img src="/moon-logo-transparent.png" alt="Moonworks Talent" className="hero__logo-img" />
+            <img
+              src="/moon-logo-transparent.png"
+              alt="Moonworks Talent logo"
+              className="hero__logo-img"
+              width="280"
+              height="280"
+            />
           </div>
         </div>
       </section>
@@ -90,7 +108,7 @@ const HomePage = () => {
           <SectionHeader
             eyebrow="Internship Programmes"
             title="Find Your Perfect Track"
-            subtitle="7 internship tracks across 5 domains. Each one designed to give you real, job-ready skills with verified credentials."
+            subtitle="7+ internship tracks across 5 domains. Each one designed to give you real, job-ready skills with verified credentials."
           />
 
           <div className="opportunities__grid">
@@ -165,6 +183,10 @@ const HomePage = () => {
               </div>
             ))}
           </div>
+
+          <p className="how-it-works__cta-text" style={{ textAlign: 'center', marginTop: 'var(--space-xl)', color: 'var(--slate-light)' }}>
+            Want the full breakdown? <Link to="/how-it-works" style={{ color: 'var(--blue-light)', textDecoration: 'underline' }}>See how it works in detail →</Link>
+          </p>
         </div>
       </section>
 

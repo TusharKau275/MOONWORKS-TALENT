@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import SectionHeader from '../../components/SectionHeader/SectionHeader';
-import { sectors } from '../../data/tracks';
+import SEO from '../../components/SEO/SEO.jsx';
+import { getBreadcrumbSchema } from '../../components/SEO/schemas.js';
+import { sectors } from '../../data/tracks.js';
 import './OpportunitiesPage.css';
 
 const facts = [
@@ -11,17 +12,30 @@ const facts = [
 ];
 
 const OpportunitiesPage = () => {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Explore Programmes', path: '/opportunities' },
+  ]);
+
   return (
     <main className="opp-page animate-fade-in-up delay-1">
+      <SEO
+        title="Explore 7 Free Remote Internship Tracks — Web Dev, HR, Marketing, Design & More"
+        description="Browse all 7 free, remote internship tracks at Moonworks Talent: Website Development, Graphic Design, Social Media Marketing, Email Marketing, HR, Administration, Operations. Apply now!"
+        path="/opportunities"
+        structuredData={breadcrumbSchema}
+      />
+
       {/* Hero */}
       <section className="opp-hero section" id="opp-hero">
         <div className="container text-center">
           <span className="eyebrow animate-fade-in-up delay-1">Explore Programmes</span>
           <h1 className="opp-hero__title animate-fade-in-up delay-2">
-            Find Your <span className="hero__highlight">Perfect</span> Internship
+            7 Free Remote <span className="hero__highlight">Internship</span> Tracks
           </h1>
           <p className="opp-hero__subtitle animate-fade-in-up delay-3">
             7 internship tracks across 5 domains. All 100% free, remote, and mentor-guided. Choose the one that matches your goals.
+            New to Moonworks? <Link to="/about" style={{ color: 'var(--blue)', fontWeight: 600, textDecoration: 'underline' }}>Learn about us</Link>.
           </p>
         </div>
       </section>
@@ -44,7 +58,7 @@ const OpportunitiesPage = () => {
       <section className="opp-tracks section" id="opp-tracks">
         <div className="container">
           {sectors.map((sector, si) => (
-            <div className={`sector-block animate-fade-in-up delay-${(si % 4) + 1}`} key={sector.id}>
+            <div className={`sector-block animate-fade-in-up delay-${(si % 4) + 1}`} key={sector.id} id={`sector-${sector.id}`}>
               <div className="sector-block__header">
                 <div className="sector-block__bar" style={{ background: sector.color }}></div>
                 <div>
@@ -55,7 +69,7 @@ const OpportunitiesPage = () => {
 
               <div className="sector-block__tracks">
                 {sector.tracks.map((track, ti) => (
-                  <div className={`track-card animate-fade-in-up delay-${(ti % 4) + 1}`} key={track.id} style={{ '--track-color': sector.color }}>
+                  <div className={`track-card animate-fade-in-up delay-${(ti % 4) + 1}`} key={track.id} id={`track-${track.id}`} style={{ '--track-color': sector.color }}>
                     <div className="track-card__header">
                       <h3 className="track-card__title">{track.title}</h3>
                       <span className="track-card__duration">{track.duration}</span>
@@ -89,6 +103,7 @@ const OpportunitiesPage = () => {
           </h2>
           <p style={{ color: 'var(--slate-light)', maxWidth: '480px', margin: '16px auto 32px', fontSize: '1rem' }}>
             Reach out and we'll help you identify the best fit based on your background, interests, and career goals.
+            See <Link to="/how-it-works" style={{ color: 'var(--blue-light)', fontWeight: 600, textDecoration: 'underline' }}>how the process works</Link> before applying.
           </p>
           <Link to="/contact" className="hero__btn hero__btn--primary">
             Talk to Us <span className="hero__btn-arrow">→</span>

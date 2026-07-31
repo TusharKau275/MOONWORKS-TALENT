@@ -1,5 +1,5 @@
-import React from 'react'
-import Navbar from './navbar.jsx'
+
+import Navbar from './Navbar/Navbar.jsx'
 import heroImg from '../assets/hero.png'
 
 const Home = ({ children }) => {
