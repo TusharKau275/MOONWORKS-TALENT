@@ -10,6 +10,7 @@ import HowItWorksPage from './features/how-it-works/HowItWorksPage.jsx';
 import ContactPage from './features/contact/ContactPage.jsx';
 import OpportunitiesPage from './features/opportunities/OpportunitiesPage.jsx';
 import NotFoundPage from './features/not-found/NotFoundPage.jsx';
+import AdminPage from './features/admin/AdminPage.jsx';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -22,21 +23,24 @@ function ScrollToTop() {
 
 function App() {
   useLenis();
+  const { pathname } = useLocation();
+  const isAdminPage = pathname === '/moonworks-admin-panel';
 
   return (
     <>
       <ScrollToTop />
-      <Navbar />
-      <Breadcrumbs />
+      {!isAdminPage && <Navbar />}
+      {!isAdminPage && <Breadcrumbs />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/how-it-works" element={<HowItWorksPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/opportunities" element={<OpportunitiesPage />} />
+        <Route path="/moonworks-admin-panel" element={<AdminPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <Footer />
+      {!isAdminPage && <Footer />}
     </>
   );
 }

@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import { contactRouter } from './features/contact/contact.routes.js';
+import { adminRouter } from './features/admin/admin.routes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
 const app = express();
@@ -40,6 +41,7 @@ app.get('/api/health', (req, res) => {
 });
 
 app.use('/api/contact', contactRouter);
+app.use('/api/admin', adminRouter);
 
 // Error handler
 app.use(errorHandler);
