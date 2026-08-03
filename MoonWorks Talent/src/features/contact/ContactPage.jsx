@@ -69,8 +69,8 @@ const ContactPage = () => {
   return (
     <main className="contact-page animate-fade-in-up delay-1">
       <SEO
-        title="Apply for Free Internship — Contact Moonworks Talent"
-        description="Apply for a 100% free, remote internship at Moonworks Talent. Choose from 7 tracks including Web Dev, HR, Marketing, Design & more. Get certificates & experience letters. Apply in 2 minutes!"
+        title="Apply to Work With Us — Moonworks Talent"
+        description="We're hiring interns to work on real client projects. 7 roles across Web Dev, HR, Marketing, Design & more. Join our team, gain real experience, and earn verified certificates. Apply in 2 minutes!"
         path="/contact"
         structuredData={breadcrumbSchema}
       />
@@ -80,7 +80,7 @@ const ContactPage = () => {
         <div className="container text-center ">
           <span className="eyebrow">Get In Touch</span>
           <h1 className="contact-hero__title animate-fade-in-up delay-1">
-            Apply for a Free <span className="hero__highlight">Remote Internship</span>
+            Apply to <span className="hero__highlight">Work With Us</span>
           </h1>
           <p className="contact-hero__subtitle animate-fade-in-up delay-2">
             Ready to apply? Have a question? Fill out the form below and we'll get back to you quickly.
@@ -231,10 +231,10 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <ul className="contact-trust__list">
-                  <li>100% Free — No hidden charges</li>
-                  <li>100% Remote — Work from home</li>
-                  <li>Verified Certificates issued</li>
-                  <li>Real mentored projects</li>
+                  <li>Work on live client projects</li>
+                  <li>Be part of our working team</li>
+                  <li>Verified certificates issued</li>
+                  <li>Guided by experienced mentors</li>
                 </ul>
               </div>
             </div>

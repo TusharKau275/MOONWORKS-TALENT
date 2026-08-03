@@ -7,7 +7,7 @@ const NotFoundPage = () => {
     <main className="not-found-page">
       <SEO
         title="Page Not Found"
-        description="The page you're looking for doesn't exist. Return to Moonworks Talent to explore free remote internships for students and freshers."
+        description="The page you're looking for doesn't exist. Return to Moonworks Talent to explore career-building internships for students and freshers."
         path="/404"
       />
       <section className="not-found section">

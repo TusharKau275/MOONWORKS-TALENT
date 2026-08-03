@@ -5,10 +5,10 @@ import { sectors } from '../../data/tracks.js';
 import './OpportunitiesPage.css';
 
 const facts = [
-  { label: '100% Free',          detail: 'Zero fees, always' },
-  { label: 'Work From Home',     detail: 'Fully remote' },
-  { label: '2, 4, or 6 Months', detail: 'Your choice of duration' },
-  { label: 'Certificate + Letter', detail: 'Verified credentials' },
+  { label: 'Live Client Work',      detail: 'Not dummy projects' },
+  { label: 'Work With Our Team',    detail: 'Guided by mentors' },
+  { label: '2, 4, or 6 Months',    detail: 'Your choice of duration' },
+  { label: 'Certificate + Letter',  detail: 'Verified credentials' },
 ];
 
 const OpportunitiesPage = () => {
@@ -20,8 +20,8 @@ const OpportunitiesPage = () => {
   return (
     <main className="opp-page animate-fade-in-up delay-1">
       <SEO
-        title="Explore 7 Free Remote Internship Tracks — Web Dev, HR, Marketing, Design & More"
-        description="Browse all 7 free, remote internship tracks at Moonworks Talent: Website Development, Graphic Design, Social Media Marketing, Email Marketing, HR, Administration, Operations. Apply now!"
+        title="Explore 7 Open Intern Roles — Web Dev, HR, Marketing, Design & More"
+        description="We're hiring interns across 7 roles at Moonworks Talent: Website Development, Graphic Design, Social Media Marketing, Email Marketing, HR, Administration, Operations. Work on real client projects with our team."
         path="/opportunities"
         structuredData={breadcrumbSchema}
       />
@@ -31,10 +31,10 @@ const OpportunitiesPage = () => {
         <div className="container text-center">
           <span className="eyebrow animate-fade-in-up delay-1">Explore Programmes</span>
           <h1 className="opp-hero__title animate-fade-in-up delay-2">
-            7 Free Remote <span className="hero__highlight">Internship</span> Tracks
+            7+ Roles. Real <span className="hero__highlight">Client Work</span>.
           </h1>
           <p className="opp-hero__subtitle animate-fade-in-up delay-3">
-            7 internship tracks across 5 domains. All 100% free, remote, and mentor-guided. Choose the one that matches your goals.
+            We're hiring interns across 7 roles. You'll join our team and work on actual client projects — not simulations.
             New to Moonworks? <Link to="/about" style={{ color: 'var(--blue)', fontWeight: 600, textDecoration: 'underline' }}>Learn about us</Link>.
           </p>
         </div>

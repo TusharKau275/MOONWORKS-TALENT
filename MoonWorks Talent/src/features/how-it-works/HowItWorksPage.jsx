@@ -7,16 +7,16 @@ import './HowItWorksPage.css';
 
 const faqs = [
   {
-    q: 'Is this internship really free?',
-    a: 'Yes, 100% free. There are no fees, no hidden charges, no deposits. Moonworks Talent is an MSME-registered company and we never charge interns anything.',
+    q: 'What makes Moonworks Talent different?',
+    a: 'We actually work with clients — and our interns are part of that work. You won\'t be doing dummy tasks. You\'ll contribute to real client projects alongside our team. Moonworks Talent is an MSME-registered company.',
   },
   {
     q: 'What are the duration options?',
     a: 'You can choose from 2, 4, or 6 months. If you\'re interested, you can extend beyond 6 months as well.',
   },
   {
-    q: 'Is this a work-from-home internship?',
-    a: 'Yes, all internships are 100% remote. You can work from anywhere in India.',
+    q: 'How is the internship structured?',
+    a: 'You\'re assigned to a team and a mentor. Each week you get tasks tied to actual client work. You submit, get feedback, and improve — just like any real job.',
   },
   {
     q: 'Do I need prior experience to apply?',
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: 'Is this internship paid?',
-    a: 'This is an unpaid internship focused on skill development and career building. You gain real experience, mentorship, and verified credentials — all for free.',
+    a: 'This is an unpaid internship. What you get is real client-facing work experience, mentorship, and verified credentials — the kind of stuff that actually makes your resume stand out.',
   },
 ];
 
@@ -54,7 +54,7 @@ const HowItWorksPage = () => {
   return (
     <main className="hiw-page animate-fade-in-up delay-1">
       <SEO
-        title="How It Works — 4 Steps to Your Free Remote Internship"
+        title="How It Works — 4 Steps to Join Our Team"
         description="Apply in 2 minutes, get your offer letter, complete weekly mentor-guided tasks, and earn verified certificates. Learn the complete process of interning with Moonworks Talent."
         path="/how-it-works"
         structuredData={structuredData}
@@ -65,7 +65,7 @@ const HowItWorksPage = () => {
         <div className="container text-center">
           <span className="eyebrow">How It Works</span>
           <h1 className="hiw-hero__title">
-            4 Steps to Your Free Remote <span className="hero__highlight">Internship</span>
+            4 Steps to <span className="hero__highlight">Join Our Team</span>
           </h1>
           <p className="hiw-hero__subtitle">
             Your journey with Moonworks Talent is simple, structured, and designed to build real skills. Here's how it works — from application to certification.
@@ -206,7 +206,7 @@ const HowItWorksPage = () => {
             Learn more <Link to="/about" style={{ color: 'var(--blue)', fontWeight: 600, textDecoration: 'underline' }}>about our company</Link>.
           </p>
           <Link to="/contact" className="hero__btn hero__btn--primary">
-            Apply Now — It's Free <span className="hero__btn-arrow">→</span>
+            Apply to Join <span className="hero__btn-arrow">→</span>
           </Link>
         </div>
       </section>

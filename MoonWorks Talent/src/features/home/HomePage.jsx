@@ -40,8 +40,8 @@ const HomePage = () => {
   return (
     <main>
       <SEO
-        title="Moonworks Talent — Free Remote Internships for Students & Freshers in India"
-        description="100% free, remote internships for students and freshers across India. 7+ tracks including Web Dev, HR, Marketing, Design & more. MSME registered. Certificates & experience letters. Apply now!"
+        title="Moonworks Talent — Gain Real Work Experience as an Intern"
+        description="Join our team and work on real projects. 7+ roles across Web Dev, HR, Marketing, Design & more. Gain hands-on experience, earn certificates & experience letters. MSME registered. Apply now!"
         path="/"
         structuredData={structuredData}
       />
@@ -52,18 +52,18 @@ const HomePage = () => {
           <div className="hero__content">
 
             <h1 className="hero__title animate-fade-in-up delay-1">
-              Free Remote Internships<br />
-              for <span className="hero__highlight">Students & Freshers</span>.
+              Gain Real Work Experience.<br />
+              <span className="hero__highlight">Join Our Team</span>.
             </h1>
 
             <p className="hero__subtitle animate-fade-in-up delay-2">
-              100% free, remote internships for students and freshers across India.
-              Gain verified credentials, mentorship, and job-ready skills — no hidden charges, ever.
+              We bring interns on board to work alongside us on real projects.
+              No dummy tasks. Real work. Real experience.
             </p>
 
             <div className="hero__actions animate-fade-in-up delay-3">
               <Link to="/contact" className="hero__btn hero__btn--primary" id="hero-get-started">
-                Apply Now — It's Free
+                Join Our Team
                 <span className="hero__btn-arrow">→</span>
               </Link>
               <Link to="/opportunities" className="hero__btn hero__btn--secondary" id="hero-explore">
@@ -74,17 +74,17 @@ const HomePage = () => {
             <div className="hero__stats animate-fade-in-up delay-4">
               <div className="hero__stat">
                 <span className="hero__stat-number">7+</span>
-                <span className="hero__stat-label">Internship Tracks</span>
+                <span className="hero__stat-label">Open Roles</span>
               </div>
               <div className="hero__stat-divider"></div>
               <div className="hero__stat">
-                <span className="hero__stat-number">100%</span>
-                <span className="hero__stat-label">Work From Home</span>
+                <span className="hero__stat-number">Real</span>
+                <span className="hero__stat-label">Projects</span>
               </div>
               <div className="hero__stat-divider"></div>
               <div className="hero__stat">
-                <span className="hero__stat-number">₹0</span>
-                <span className="hero__stat-label">Zero Fees</span>
+                <span className="hero__stat-number">Real</span>
+                <span className="hero__stat-label">Team Experience</span>
               </div>
             </div>
           </div>
@@ -237,14 +237,14 @@ const HomePage = () => {
         <div className="container text-center">
           <span className="eyebrow" style={{ color: 'var(--blue-light)' }}>Ready to Begin?</span>
           <h2 className="cta-section__title">
-            Your Career Starts With One Decision
+            We're Hiring Interns. Want In?
           </h2>
           <p className="cta-section__subtitle">
-            Join students across India building real skills through free, mentored internships. No fees. No catch. Just growth.
+            Join our team, work on real projects, and walk away with experience, certificates & a letter that actually means something.
           </p>
           <div className="cta-section__actions">
             <Link to="/contact" className="hero__btn hero__btn--primary" id="cta-apply">
-              Apply Now — It's Free
+              Apply to Join
               <span className="hero__btn-arrow">→</span>
             </Link>
             <Link to="/how-it-works" className="hero__btn hero__btn--secondary hero__btn--on-dark" id="cta-learn-more">
