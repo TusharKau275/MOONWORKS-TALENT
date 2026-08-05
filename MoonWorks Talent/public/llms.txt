@@ -1,6 +1,13 @@
 # Moonworks Talent
 
-Moonworks Talent is an MSME-registered and Udyam-certified company in India that provides real-world internships to students and freshers. We don't believe in dummy tasks; instead, our interns join our team to work on actual client projects under the guidance of experienced mentors.
+> Moonworks Talent is an MSME-registered and Udyam-certified company in India providing real-world internships to students and freshers. We don't believe in dummy tasks; instead, our interns join our team to work on actual client projects under the guidance of experienced mentors.
+
+## Quick Links
+- [Home](/)
+- [Explore Opportunities](/opportunities)
+- [How It Works](/how-it-works)
+- [About Us](/about)
+- [Contact and Apply](/contact)
 
 ## Internship Roles & Tracks
 We offer 7 internship roles across 5 sectors. The duration for each track is flexible (2, 4, or 6 months, with the option to extend).
@@ -35,5 +42,5 @@ We offer 7 internship roles across 5 sectors. The duration for each track is fle
 4. **Earn Credentials**: Complete the duration (2, 4, or 6 months) and receive verified professional certificates.
 
 ## Contact Information
-- **Email**: moonworks.talent@gmail.com
+- **Email**: [moonworks.talent@gmail.com](mailto:moonworks.talent@gmail.com)
 - **Location**: Haryana, India
