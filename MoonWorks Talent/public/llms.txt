@@ -1,0 +1,39 @@
+# Moonworks Talent
+
+Moonworks Talent is an MSME-registered and Udyam-certified company in India that provides real-world internships to students and freshers. We don't believe in dummy tasks; instead, our interns join our team to work on actual client projects under the guidance of experienced mentors.
+
+## Internship Roles & Tracks
+We offer 7 internship roles across 5 sectors. The duration for each track is flexible (2, 4, or 6 months, with the option to extend).
+
+1. **Website Development Intern** (Technology & Development)
+   - Skills: HTML5, CSS3, JavaScript, React.js, Node.js, Git & GitHub.
+2. **Graphic Designer Intern** (Design & Creative)
+   - Skills: Figma, Adobe Photoshop, Canva, Brand Design, Social Media Graphics.
+3. **Social Media Marketing Intern** (Marketing & Growth)
+   - Skills: Content Strategy, Social Media Management, Google Analytics, Copywriting.
+4. **Email Marketing Intern** (Marketing & Growth)
+   - Skills: Mailchimp, Email Copywriting, Campaign Analytics, A/B Testing.
+5. **HR Intern** (People & HR)
+   - Skills: Talent Acquisition, Screening, Onboarding, HR Communication.
+6. **Administration Intern** (Business Operations)
+   - Skills: Documentation, Coordination, Google Workspace, Professional Communication.
+7. **Operations Intern** (Business Operations)
+   - Skills: Project Management, Process Optimization, Task Tracking, Reporting.
+
+## Key Program Benefits
+- **100% Free**: Our internships are completely free. No fees, no hidden charges, and no deposits.
+- **100% Remote**: Work from anywhere in India.
+- **Fast Onboarding**: Selected interns receive an official offer letter within 24 hours. No delays.
+- **Real Client Work**: Interns contribute to actual projects, not simulations.
+- **Verified Credentials**: Every intern who successfully completes the program receives a Certificate of Completion and an Experience Letter.
+- **Letter of Recommendation**: Top performers receive a personal Letter of Recommendation (LOR) from the founder.
+
+## The Process
+1. **Apply**: Submit an application (takes less than 2 minutes).
+2. **Offer**: Get selected and receive your offer letter within 24 hours.
+3. **Work**: Complete weekly, mentor-guided practical tasks tied to real client projects.
+4. **Earn Credentials**: Complete the duration (2, 4, or 6 months) and receive verified professional certificates.
+
+## Contact Information
+- **Email**: moonworks.talent@gmail.com
+- **Location**: Haryana, India
