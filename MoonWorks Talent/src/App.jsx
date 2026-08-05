@@ -1,16 +1,32 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useLenis } from './hooks/useLenis.js';
+import { useEffect, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Breadcrumbs from './components/Breadcrumbs/Breadcrumbs.jsx';
-import HomePage from './features/home/HomePage.jsx';
-import AboutPage from './features/about/AboutPage.jsx';
-import HowItWorksPage from './features/how-it-works/HowItWorksPage.jsx';
-import ContactPage from './features/contact/ContactPage.jsx';
-import OpportunitiesPage from './features/opportunities/OpportunitiesPage.jsx';
-import NotFoundPage from './features/not-found/NotFoundPage.jsx';
-import AdminPage from './features/admin/AdminPage.jsx';
+
+// Lazy-loaded pages — each becomes a separate JS chunk
+const HomePage = lazy(() => import('./features/home/HomePage.jsx'));
+const AboutPage = lazy(() => import('./features/about/AboutPage.jsx'));
+const HowItWorksPage = lazy(() => import('./features/how-it-works/HowItWorksPage.jsx'));
+const ContactPage = lazy(() => import('./features/contact/ContactPage.jsx'));
+const OpportunitiesPage = lazy(() => import('./features/opportunities/OpportunitiesPage.jsx'));
+const NotFoundPage = lazy(() => import('./features/not-found/NotFoundPage.jsx'));
+const AdminPage = lazy(() => import('./features/admin/AdminPage.jsx'));
+
+// Minimal loading fallback — keeps layout stable while chunks load
+const PageLoader = () => (
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: '60vh',
+    color: 'var(--text-muted)',
+    fontSize: '0.9rem',
+    fontFamily: 'var(--font-body)',
+  }}>
+    Loading…
+  </div>
+);
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -22,7 +38,6 @@ function ScrollToTop() {
 }
 
 function App() {
-  useLenis();
   const { pathname } = useLocation();
   const isAdminPage = pathname === '/moonworks-admin-panel';
 
@@ -31,15 +46,17 @@ function App() {
       <ScrollToTop />
       {!isAdminPage && <Navbar />}
       {!isAdminPage && <Breadcrumbs />}
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/how-it-works" element={<HowItWorksPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/opportunities" element={<OpportunitiesPage />} />
-        <Route path="/moonworks-admin-panel" element={<AdminPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/how-it-works" element={<HowItWorksPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/opportunities" element={<OpportunitiesPage />} />
+          <Route path="/moonworks-admin-panel" element={<AdminPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
       {!isAdminPage && <Footer />}
     </>
   );

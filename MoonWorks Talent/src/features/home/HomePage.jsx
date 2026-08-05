@@ -91,13 +91,22 @@ const HomePage = () => {
 
           {/* Hero logo — clean, no orbit decoration */}
           <div className="hero__logo-block animate-fade-in delay-2" aria-hidden="true">
-            <img
-              src="/moon-logo-transparent.png"
-              alt="Moonworks Talent logo"
-              className="hero__logo-img"
-              width="280"
-              height="280"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="/moon-logo-125w.webp 125w, /moon-logo-280w.webp 280w, /moon-logo-432w.webp 432w"
+                sizes="(max-width: 480px) 125px, (max-width: 900px) 160px, 432px"
+              />
+              <img
+                src="/moon-logo-transparent.png"
+                alt="Moonworks Talent logo"
+                className="hero__logo-img"
+                width="432"
+                height="432"
+                fetchPriority="high"
+                loading="eager"
+              />
+            </picture>
           </div>
         </div>
       </section>

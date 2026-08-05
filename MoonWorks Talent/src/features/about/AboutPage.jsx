@@ -117,9 +117,9 @@ const AboutPage = () => {
               <p className="trust-card__desc">Government registered Micro Enterprise under MSME with valid Udyam certification.</p>
             </div>
             <div className="trust-card">
-              <span className="trust-card__icon">🆓</span>
-              <h4 className="trust-card__title">100% Free</h4>
-              <p className="trust-card__desc">No fees, no hidden charges, no deposits. Our internships are completely free. Always.</p>
+              <span className="trust-card__icon">📩</span>
+              <h4 className="trust-card__title">Offer Letter in 24 Hrs</h4>
+              <p className="trust-card__desc">Interns receive their official offer letter within 24 hours of selection. No delays, no waiting.</p>
             </div>
             <div className="trust-card">
               <span className="trust-card__icon">🏠</span>

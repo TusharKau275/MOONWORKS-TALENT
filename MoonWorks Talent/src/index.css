@@ -356,10 +356,12 @@ p {
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s var(--ease-out) both;
+  will-change: transform, opacity;
 }
 
 .animate-fade-in {
   animation: fadeIn 0.5s var(--ease-out) both;
+  will-change: transform, opacity;
 }
 
 /* Staggered animation delays */
@@ -385,6 +387,16 @@ p {
 
 .delay-6 {
   animation-delay: 0.6s;
+}
+
+/* Reduce animation overhead on mobile — fewer stagger delays */
+@media (max-width: 768px) {
+  .delay-3,
+  .delay-4,
+  .delay-5,
+  .delay-6 {
+    animation-delay: 0.2s;
+  }
 }
 
 /* Reduced motion */
