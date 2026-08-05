@@ -90,7 +90,7 @@ const HomePage = () => {
           </div>
 
           {/* Hero logo — clean, no orbit decoration */}
-          <div className="hero__logo-block animate-fade-in delay-2" aria-hidden="true">
+          <div className="hero__logo-block" aria-hidden="true">
             <picture>
               <source
                 type="image/webp"

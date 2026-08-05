@@ -56,8 +56,8 @@ function App() {
           <Route path="/moonworks-admin-panel" element={<AdminPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        {!isAdminPage && <Footer />}
       </Suspense>
-      {!isAdminPage && <Footer />}
     </>
   );
 }
