@@ -256,7 +256,7 @@ function AdminPage() {
         <div className="admin-gate">
           <div className="admin-gate__card">
             <img
-              src="/moon-logo-transparent.png"
+              src="/moon-logo-125w.webp"
               alt="Moonworks Talent"
               className="admin-gate__logo"
             />
@@ -305,7 +305,7 @@ function AdminPage() {
         <div className="admin-header__top">
           <div className="admin-header__brand">
             <img
-              src="/moon-logo-transparent.png"
+              src="/moon-logo-125w.webp"
               alt="Moonworks Talent"
               className="admin-header__logo-img"
             />

@@ -12,7 +12,7 @@ export const getOrganizationSchema = () => ({
   '@type': 'Organization',
   name: 'Moonworks Talent',
   url: SITE_URL,
-  logo: `${SITE_URL}/moon-logo-transparent.png`,
+  logo: `${SITE_URL}/moon-logo-432w.webp`,
   description:
     'Moonworks Talent offers 100% free, remote internships for students and freshers across India. MSME registered & Udyam certified.',
   email: 'moonworks.talent@gmail.com',

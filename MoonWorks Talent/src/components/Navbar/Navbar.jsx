@@ -33,7 +33,7 @@ const Navbar = () => {
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`} id="main-nav">
       <div className="navbar__inner container">
         <Link to="/" className="navbar__logo" onClick={closeMobile}>
-          <img src="/moon-logo-transparent.png" alt="Moonworks Talent" className="navbar__logo-img" />
+          <img src="/moon-logo-125w.webp" alt="Moonworks Talent" className="navbar__logo-img" width="44" height="44" />
           <span className="navbar__logo-text">
             Moon<span className="navbar__logo-accent">works</span>
           </span>

@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Brand column */}
           <div className="footer__brand">
             <div className="footer__logo">
-              <img src="/moon-logo-transparent.png" alt="Moonworks Talent logo" className="footer__logo-img" loading="lazy" width="40" height="40" />
+              <img src="/moon-logo-125w.webp" alt="Moonworks Talent logo" className="footer__logo-img" loading="lazy" width="40" height="40" />
               <span className="footer__logo-text">
                 Moon<span className="footer__logo-accent">works</span> Talent
               </span>
