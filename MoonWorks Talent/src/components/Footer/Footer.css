@@ -3,6 +3,7 @@
   color: var(--text-on-dark);
   padding: var(--space-4xl) 0 0;
   margin-top: auto;
+  min-height: 280px; /* Reserve space to prevent CLS during font load */
 }
 
 .footer__top {
