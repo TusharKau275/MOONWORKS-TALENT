@@ -210,6 +210,15 @@ const ContactPage = () => {
               </div>
 
               <div className="contact-info-card">
+                <h4 className="contact-info-card__title"> Call Us</h4>
+                <address style={{ fontStyle: 'normal' }}>
+                  <a href="tel:+919992526959" className="contact-info-card__link">
+                    +91 9992526959
+                  </a>
+                </address>
+              </div>
+
+              <div className="contact-info-card">
                 <h4 className="contact-info-card__title"> Location</h4>
                 <address style={{ fontStyle: 'normal' }}>
                   <p className="contact-info-card__text">Haryana, India</p>
